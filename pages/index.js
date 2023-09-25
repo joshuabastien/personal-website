@@ -1,17 +1,26 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import homeStyles from '../styles/Home.module.css';
+import buttonStyles from '../styles/Button.module.css'
+import { useState } from 'react';
+
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(true);
+
   return (
-    <div className={styles.container}>
+    <div className={homeStyles.container} style={darkMode ? { backgroundColor: '#121212', color: '#ffffff' } : {}}>
       <Head>
         <title>Joshua Bastien</title>
         <link rel="icon" href="/picture3.jpeg" />
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Hello, I'm <span style={{ color: '#0070f3' }}>Joshua Bastien</span>
+        <h1 className={homeStyles.title}>
+          Hello, I'm 
+          <button data-text="Joshua Bastien" className={buttonStyles.button}>
+          <span className={buttonStyles.actualText}>Joshua Bastien</span>
+          <span className={buttonStyles.hoverText} aria-hidden="true">Joshua Bastien</span>
+          </button>
         </h1>
 
         <img src="/picture1.jpeg" alt="Your Picture" style={{ borderRadius: '50%', width: '400px', margin: '20px 0' }} />
@@ -33,9 +42,14 @@ export default function Home() {
           </a>
         </div>
 
-        <p className={styles.description}>
-          Todo here is a description about me. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <p className={homeStyles.description}>
+        Proficient computer science student, excels in his role as a Junior Developer at Voltaric Inc., using his expertise in C# (.NET, XAML) and JavaScript (React.js, Node.js, Express.js) to create innovative solutions. His work is underpinned by a strong understanding of object-oriented programming, enabling the development of efficient, reusable, and maintainable code. Outside of professional endeavors, Joshua actively participates in hackathons, further honing his problem-solving skills and competitive edge. This blend of technical proficiency, keen understanding of OOP, and hands-on work and hackathon experience positions him well for impactful contributions in software development.
         </p>
+
+        <button onClick={() => setDarkMode(!darkMode)}>
+          Toggle {darkMode ? 'Light' : 'Dark'} Mode
+        </button>
+
 
       </main>
 
@@ -84,8 +98,17 @@ export default function Home() {
             Bitstream Vera Sans Mono,
             Courier New,
             monospace;
-        }
-      `}</style>
-    </div>
+            ${darkMode ? `
+            main {
+              background-color: #121212;
+              color: #ffffff;
+            }
+            footer {
+              background-color: #1f1f1f;
+              border-top: 1px solid #ffffff;
+            }
+          ` : ''}
+        `}</style>
+      </div>
   );
 }
