@@ -15,7 +15,7 @@ export default function Home() {
         Hello, I'm <a>Joshua Bastien</a>
       </h1>
 
-        <img src="/picture1.jpeg" alt="Your Picture" style={{ borderRadius: '50%', width: '400px', margin: '20px 0' }} />
+        <img className={styles.card} src="/picture1.jpeg" alt="Your Picture" style={{ borderRadius: '50%', width: '400px', margin: '20px 0' }} />
 
         <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
           <a
