@@ -1,27 +1,19 @@
 import Head from 'next/head';
-import homeStyles from '../styles/Home.module.css';
-import buttonStyles from '../styles/Button.module.css'
-import { useState } from 'react';
-
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
 
   return (
-    <div className={homeStyles.container} style={darkMode ? { backgroundColor: '#121212', color: '#ffffff' } : {}}>
+    <div className={styles.container}>
       <Head>
         <title>Joshua Bastien</title>
         <link rel="icon" href="/picture3.jpeg" />
       </Head>
 
       <main>
-        <h1 className={homeStyles.title}>
-          Hello, I'm 
-          <button data-text="Joshua Bastien" className={buttonStyles.button}>
-          <span className={buttonStyles.actualText}>Joshua Bastien</span>
-          <span className={buttonStyles.hoverText} aria-hidden="true">Joshua Bastien</span>
-          </button>
-        </h1>
+      <h1 className={styles.title}>
+        Hello, I'm <a>Joshua Bastien</a>
+      </h1>
 
         <img src="/picture1.jpeg" alt="Your Picture" style={{ borderRadius: '50%', width: '400px', margin: '20px 0' }} />
 
@@ -42,21 +34,15 @@ export default function Home() {
           </a>
         </div>
 
-        <p className={homeStyles.description}>
+        <p className={styles.description}>
         Proficient computer science student, excels in his role as a Junior Developer at Voltaric Inc., using his expertise in C# (.NET, XAML) and JavaScript (React.js, Node.js, Express.js) to create innovative solutions. His work is underpinned by a strong understanding of object-oriented programming, enabling the development of efficient, reusable, and maintainable code. Outside of professional endeavors, Joshua actively participates in hackathons, further honing his problem-solving skills and competitive edge. This blend of technical proficiency, keen understanding of OOP, and hands-on work and hackathon experience positions him well for impactful contributions in software development.
         </p>
-
-        <button onClick={() => setDarkMode(!darkMode)}>
-          Toggle {darkMode ? 'Light' : 'Dark'} Mode
-        </button>
-
 
       </main>
 
       <footer>
         &copy; 2023 All rights reserved. Designed and developed using Next.js by Joshua Bastien.
       </footer>
-
       <style jsx>{`
         main {
           padding: 5rem 0;
@@ -98,17 +84,31 @@ export default function Home() {
             Bitstream Vera Sans Mono,
             Courier New,
             monospace;
-            ${darkMode ? `
-            main {
-              background-color: #121212;
-              color: #ffffff;
-            }
-            footer {
-              background-color: #1f1f1f;
-              border-top: 1px solid #ffffff;
-            }
-          ` : ''}
-        `}</style>
-      </div>
+        }
+      `}</style>
+
+      <style jsx global>{`
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+          font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            Segoe UI,
+            Roboto,
+            Oxygen,
+            Ubuntu,
+            Cantarell,
+            Fira Sans,
+            Droid Sans,
+            Helvetica Neue,
+            sans-serif;
+        }
+        * {
+          box-sizing: border-box;
+        }
+      `}</style>
+    </div>
   );
 }
