@@ -66,6 +66,16 @@ export default function Home() {
           </a>
         </div>
 
+        <p className={styles.description}>
+        A Computer Science student from the University of Toronto currently working as a Junior Software Developer in .NET. Previously interned in React gaining proficiency and passion for front-end development. Excited about innovation, I have showcased my skills in multiple hackathons and have a portfolio of personal projects that reflect my commitment to software excellence.
+        </p>
+
+        <h2 className={styles.subheading}>Contact Me</h2>
+
+        <a href="mailto:josh@joshuabastien.com" target="_blank" rel="noopener noreferrer">
+          josh@joshuabastien.com
+        </a>
+
       </main>
 
       <footer>
