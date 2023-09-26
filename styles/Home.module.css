@@ -5,6 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(96, 181, 218, 0.2), rgba(0, 47, 255, 0.2), rgba(0,0,255,0.2));
+  transition: background 0.5s;
+
 }
 .title a {
   color: #0070f3;

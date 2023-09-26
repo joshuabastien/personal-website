@@ -1,7 +1,24 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import { useEffect } from 'react';
+
 
 export default function Home() {
+
+  useEffect(() => {
+    const updateBackground = (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      document.documentElement.style.setProperty('--x', `${x}%`);
+      document.documentElement.style.setProperty('--y', `${y}%`);
+    };
+
+    window.addEventListener('mousemove', updateBackground);
+
+    return () => {
+      window.removeEventListener('mousemove', updateBackground);
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
