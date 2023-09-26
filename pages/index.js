@@ -66,15 +66,6 @@ export default function Home() {
           </a>
         </div>
 
-        <div className={styles.contact}>
-          <h2>Contact Me</h2>
-          <p>Email: <a href="mailto:josh@joshuabastien.com">josh@joshuabastien.com</a></p>
-        </div>
-
-        <p className={styles.description}>
-        Proficient computer science student, excels in his role as a Junior Developer at Voltaric Inc., using his expertise in C# (.NET, XAML) and JavaScript (React.js, Node.js, Express.js) to create innovative solutions. His work is underpinned by a strong understanding of object-oriented programming, enabling the development of efficient, reusable, and maintainable code. Outside of professional endeavors, Joshua actively participates in hackathons, further honing his problem-solving skills and competitive edge. This blend of technical proficiency, keen understanding of OOP, and hands-on work and hackathon experience positions him well for impactful contributions in software development.
-        </p>
-
       </main>
 
       <footer>
