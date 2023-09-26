@@ -3,19 +3,35 @@ import styles from '../styles/Home.module.css';
 import { useEffect } from 'react';
 
 export default function Home() {
+  let targetX = 50; // Initial values
+  let targetY = 50;
+  let currentX = 50;
+  let currentY = 50;
+  let rafId = null;
+
+  const updateBackground = (e) => {
+    targetX = (e.clientX / window.innerWidth) * 100;
+    targetY = (e.clientY / window.innerHeight) * 100;
+  };
+
+  const animateBackground = () => {
+    // Interpolate current values towards target values
+    currentX += (targetX - currentX) * 0.01;
+    currentY += (targetY - currentY) * 0.01;
+
+    document.documentElement.style.setProperty('--x', `${currentX}%`);
+    document.documentElement.style.setProperty('--y', `${currentY}%`);
+
+    rafId = requestAnimationFrame(animateBackground);
+  };
 
   useEffect(() => {
-    const updateBackground = (e) => {
-      const x = (e.clientX / window.innerWidth) * 100;
-      const y = (e.clientY / window.innerHeight) * 100;
-      document.documentElement.style.setProperty('--x', `${x}%`);
-      document.documentElement.style.setProperty('--y', `${y}%`);
-    };
-
     window.addEventListener('mousemove', updateBackground);
+    rafId = requestAnimationFrame(animateBackground);
 
     return () => {
       window.removeEventListener('mousemove', updateBackground);
+      cancelAnimationFrame(rafId);
     };
   }, []);
 
@@ -50,6 +66,11 @@ export default function Home() {
           </a>
         </div>
 
+        <div className={styles.contact}>
+          <h2>Contact Me</h2>
+          <p>Email: <a href="mailto:josh@joshuabastien.com">josh@joshuabastien.com</a></p>
+        </div>
+
         <p className={styles.description}>
         Proficient computer science student, excels in his role as a Junior Developer at Voltaric Inc., using his expertise in C# (.NET, XAML) and JavaScript (React.js, Node.js, Express.js) to create innovative solutions. His work is underpinned by a strong understanding of object-oriented programming, enabling the development of efficient, reusable, and maintainable code. Outside of professional endeavors, Joshua actively participates in hackathons, further honing his problem-solving skills and competitive edge. This blend of technical proficiency, keen understanding of OOP, and hands-on work and hackathon experience positions him well for impactful contributions in software development.
         </p>
@@ -57,7 +78,7 @@ export default function Home() {
       </main>
 
       <footer>
-        &copy; 2023 All rights reserved. Designed and developed using Next.js by Joshua Bastien.
+        &copy; 2023 Designed and developed using Next.js by Joshua Bastien. All rights reserved. 
       </footer>
 
       <style jsx>{`

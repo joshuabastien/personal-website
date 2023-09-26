@@ -7,8 +7,8 @@
   align-items: center;
   background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(96, 181, 218, 0.2), rgba(0, 47, 255, 0.2), rgba(0,0,255,0.2));
   transition: background 0.5s;
-
 }
+
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -65,12 +65,6 @@
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition:
-    color 0.15s ease,
-    border-color 0.15s ease;
-
-    filter: url('#gooey'); /* Linking the card to the SVG filter for the gooey effect */
-    overflow: hidden; /* Ensures the gooey effect stays within the card's borders */
   }
   
   @keyframes gooeyAnimation {
