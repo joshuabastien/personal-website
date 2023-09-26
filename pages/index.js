@@ -2,7 +2,6 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { useEffect } from 'react';
 
-
 export default function Home() {
 
   useEffect(() => {
@@ -61,17 +60,6 @@ export default function Home() {
         &copy; 2023 All rights reserved. Designed and developed using Next.js by Joshua Bastien.
       </footer>
 
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ height: '0', width: '0', position: 'absolute', visibility: 'hidden' }}>
-  <defs>
-    <filter id="gooey">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooey"></feColorMatrix>
-      <feBlend in="SourceGraphic" in2="gooey"></feBlend>
-    </filter>
-  </defs>
-</svg>
-
-
       <style jsx>{`
         main {
           padding: 5rem 0;
@@ -116,28 +104,6 @@ export default function Home() {
         }
       `}</style>
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family:
-            -apple-system,
-            BlinkMacSystemFont,
-            Segoe UI,
-            Roboto,
-            Oxygen,
-            Ubuntu,
-            Cantarell,
-            Fira Sans,
-            Droid Sans,
-            Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   );
 }
