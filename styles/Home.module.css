@@ -65,9 +65,26 @@
   transition:
     color 0.15s ease,
     border-color 0.15s ease;
-}
 
-.card:hover,
+    filter: url('#gooey'); /* Linking the card to the SVG filter for the gooey effect */
+    overflow: hidden; /* Ensures the gooey effect stays within the card's borders */
+  }
+  
+  @keyframes gooeyAnimation {
+    0%, 100% {
+      border-radius: 50%;
+    }
+    50% {
+      border-radius: 25%;
+    }
+  }
+  
+.card:hover {
+  color: #0070f3;
+  border-color: #0070f3;
+  animation: gooeyAnimation 2s infinite; /* Adding the gooey animation on hover */
+
+}
 .card:focus,
 .card:active {
   color: #0070f3;
