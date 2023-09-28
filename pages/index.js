@@ -66,18 +66,6 @@ export default function Home() {
           </a>
         </div>
 
-        <h2 className={styles.subheading}>My Resume</h2>
-        <p>
-          Interested in my professional journey? Download my resume below.
-        </p>
-        <a 
-          href="/public/Joshua Bastien Resume.pdf" 
-          download="Joshua Bastien Resume.pdf" 
-          className={styles.resumeButton}
-        >
-          Download Resume
-        </a>
-
         <p className={styles.description}>
         A Computer Science student from the University of Toronto currently working as a Junior Software Developer in .NET. Previously interned in React gaining proficiency and passion for front-end development. Excited about innovation, I have showcased my skills in multiple hackathons and have a portfolio of personal projects that reflect my commitment to software excellence.
         </p>
@@ -87,6 +75,8 @@ export default function Home() {
         <a href="mailto:josh@joshuabastien.com" target="_blank" rel="noopener noreferrer">
           josh@joshuabastien.com
         </a>
+
+        <iframe src="/Joshua_Bastien_Resume.pdf" width="100%" height="500px"></iframe>
 
       </main>
 
