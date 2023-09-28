@@ -109,3 +109,24 @@
     flex-direction: column;
   }
 }
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.downloadButton {
+  background-color: #0070f3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.downloadButton:hover {
+  background-color: #0051a8;
+}

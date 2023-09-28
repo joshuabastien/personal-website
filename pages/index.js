@@ -70,6 +70,12 @@ export default function Home() {
         A Computer Science student from the University of Toronto currently working as a Junior Software Developer in .NET. Previously interned in React gaining proficiency and passion for front-end development. Excited about innovation, I have showcased my skills in multiple hackathons and have a portfolio of personal projects that reflect my commitment to software excellence.
         </p>
 
+        <div className={styles.buttonContainer}>
+          <a href="/Joshua_Bastien_Resume.pdf" download className={styles.downloadButton}>
+          Download My Resume
+          </a>
+        </div>
+
         <h2 className={styles.subheading}>Contact Me</h2>
 
         <a href="mailto:josh@joshuabastien.com" target="_blank" rel="noopener noreferrer">
