@@ -40,16 +40,6 @@
   text-align: center;
 }
 
-/* Mobile view adjustments */
-@media only screen and (max-width: 600px) {
-  .title {
-    font-size: 2.4rem; /* Adjust font size for mobile */
-  }
-  .title a {
-    display: block; /* Make the link element a block to occupy its own line */
-  }
-}
-
 .description {
   text-align: center;
   line-height: 1.5;
@@ -140,4 +130,18 @@
 
 .downloadButton:hover {
   background-color: #0051a8;
+}
+
+/* Mobile view adjustments */
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 2.8rem; /* Adjust font size for mobile */
+  }
+  .title a {
+    display: block; /* Make the link element a block to occupy its own line */
+  }
+  .description {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    margin: 0rem 1rem 2rem 1rem; /* Adjust margins for mobile */
+  }
 }
