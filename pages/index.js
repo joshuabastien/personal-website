@@ -67,7 +67,7 @@ export default function Home() {
         </div>
 
         <p className={styles.description}>
-        A Computer Science student from the University of Toronto currently working as a Junior Software Developer in .NET. Previously interned in React gaining proficiency and passion for front-end development. Excited about innovation, I have showcased my skills in multiple hackathons and have a portfolio of personal projects that reflect my commitment to software excellence.
+        A Computer Science student from the University of Toronto currently working as Full Stack Developer. Excited about innovation, I have showcased my skills in multiple hackathons and have a portfolio of personal projects and work experience that reflect my commitment to software excellence.
         </p>
 
         <div className={styles.buttonContainer}>
@@ -85,7 +85,7 @@ export default function Home() {
       </main>
 
       <footer>
-        &copy; 2023 Designed and developed using Next.js by Joshua Bastien. All rights reserved. 
+        &copy; 2024 Designed and developed using Next.js by Joshua Bastien. 
       </footer>
 
       <style jsx>{`
