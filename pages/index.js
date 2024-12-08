@@ -67,7 +67,7 @@ export default function Home() {
         </div>
 
         <p className={styles.description}>
-        A Computer Science student from the University of Toronto currently working as Full Stack Developer. Excited about innovation, I have showcased my skills in multiple hackathons and have a portfolio of personal projects and work experience that reflect my commitment to software excellence.
+        I'm a Computer and Mathematical Sciences student and Software Engineer from the University of Toronto. Excited about innovation, I have showcased my skills in multiple hackathons and have a portfolio of personal projects and work experience that reflect my commitment to software excellence.
         </p>
 
         <div className={styles.buttonContainer}>
