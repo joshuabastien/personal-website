@@ -70,11 +70,11 @@ export default function Home() {
         I'm a Computer and Mathematical Sciences student and Software Engineer from the University of Toronto. Excited about innovation, I have showcased my skills in multiple hackathons and have a portfolio of personal projects and work experience that reflect my commitment to software excellence.
         </p>
 
-        <div className={styles.buttonContainer}>
-          <a href="/Joshua_Bastien_Resume.pdf" download className={styles.downloadButton}>
-          Download My Resume
-          </a>
-        </div>
+          <div className={styles.buttonContainer}>
+            <a href="/Joshua_Bastien_Resume.pdf" download className={styles.downloadButton}>
+            Download My Resume
+            </a>
+          </div>
 
         <h2 className={styles.subheading}>Contact Me</h2>
 
@@ -83,10 +83,6 @@ export default function Home() {
         </a>
 
       </main>
-
-      <footer>
-        &copy; 2024 Designed and developed using Next.js by Joshua Bastien. 
-      </footer>
 
       <style jsx>{`
         main {
